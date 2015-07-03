@@ -8,17 +8,29 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivityFragment">
 
-    <SearchView
+
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/searchView"
-        android:layout_above="@+id/listview_artist"
+        android:id="@+id/searchText"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <MultiAutoCompleteTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/autocomplete_artist"
+        android:enabled="true"
+        android:ems="10">
+
+    </MultiAutoCompleteTextView>
+
 
     <ListView
         android:id="@+id/listview_artist"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchText" />
 
 
 
